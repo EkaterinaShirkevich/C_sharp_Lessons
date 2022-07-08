@@ -3,7 +3,7 @@
 Console.WriteLine("Write a number a: ");
 int a = int.Parse(Console.ReadLine());
 int i=0;
-if(a<0)
+if(a>0)
 i=-a;
 while(i<=a)
 {
