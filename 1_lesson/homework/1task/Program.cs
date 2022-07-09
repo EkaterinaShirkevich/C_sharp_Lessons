@@ -3,11 +3,11 @@ Console.WriteLine("Write a number a: ");
 int a = int.Parse(Console.ReadLine());
 Console.WriteLine("Write a number b: ");
 int b = int.Parse(Console.ReadLine());
-if(a>b)
-{
-    Console.Write("max=a, min=b");
-}
-else
-{
-    Console.Write("max=b, min=a");
-}
+int max=a;
+int min=b;
+if(max<b) max=b;
+Console.Write("max= ");
+Console.Write(max);
+if(min>a) min=a;
+Console.Write("min= ");
+Console.Write(min);
