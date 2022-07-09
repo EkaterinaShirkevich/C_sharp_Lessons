@@ -29,7 +29,7 @@ else if(a==7)
 {
     Console.WriteLine("вс");
 }
-else
+else if(a>7)
 {
     Console.WriteLine("Ошибка ввода");
 }
