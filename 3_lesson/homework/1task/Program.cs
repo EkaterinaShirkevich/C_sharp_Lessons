@@ -16,4 +16,4 @@ void Palindrome(int a)
         Console.WriteLine("This is not palindrome");
     }
 }
-Palindrome(23432);
+Palindrome(12821);
