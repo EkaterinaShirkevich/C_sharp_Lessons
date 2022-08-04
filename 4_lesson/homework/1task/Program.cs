@@ -3,3 +3,11 @@
 //3, 5 -> 243 (3⁵)
 //2, 4 -> 16
 
+int Expo (int a, int b)
+{
+    int count=1;
+    for (int i=1; i<=b; i++)
+    count=count*a;
+    return count;
+}
+Console.WriteLine(Expo(3,5));
