@@ -16,6 +16,7 @@ int[] MassNums(int size, int from, int to)
     int[] arr = new int[size];
 
     for (int i = 0; i < size; i++)
+int[]arr_1=
     {
         arr[i] = new Random().Next(from, to);        
     }    
@@ -30,7 +31,7 @@ void Change(int [] arr)
        
     }
 }
-int[]arr_1=MassNums(12,-9,9);
+MassNums(12,-9,9);
 Print(arr_1);
 Change(arr_1);
 Print(arr_1);    
