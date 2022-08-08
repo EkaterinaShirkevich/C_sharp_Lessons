@@ -29,12 +29,12 @@ int Sum (int [] arr_1)
 {
     int sum=0;
     for(int i=0; i<arr_1.Length; i++)
-    if(arr_1[i]%2!=0)
+    if(i%2!=0)
     sum+=arr_1[i];
 
     return sum;
 }
 
-int[] arr_2 = MassNums(4);
+int[] arr_2 = MassNums(9);
 Print(arr_2);
 Console.WriteLine(Sum(arr_2));
