@@ -9,7 +9,7 @@ void IntersectionPoint(double b1, double k1, double b2, double k2)
     double y = k2 * x + b2;
     Console.WriteLine($"{x},{y}");
 }
-Console.WriteLine(IntersectionPoint(2,5,4,9));
+IntersectionPoint(2,5,4,9);
 
 
 
