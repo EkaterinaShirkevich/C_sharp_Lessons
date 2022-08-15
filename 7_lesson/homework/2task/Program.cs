@@ -37,12 +37,12 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-string FindWithPosition(int [,] arr, int pos1, int pos2)
-{  
-    if(pos1>arr.GetLength(0) | pos2>arr.GetLength(1))
+string FindWithPosition(int[,] arr, int pos1, int pos2)
+{
+    if (pos1 > arr.GetLength(0) | pos2 > arr.GetLength(1))
         return $"This position not found";
     else
-        return $"{arr[pos1-1,pos2-1]}";  //отнимаем 1 от введенного значения, тк пользователь считает с единицы, а не с нуля
+        return $"{arr[pos1 - 1, pos2 - 1]}";  //отнимаем 1 от введенного значения, тк пользователь считает с единицы, а не с нуля
 }
 
 Console.Write("Enter the number of rows: ");

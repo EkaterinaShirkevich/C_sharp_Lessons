@@ -36,23 +36,25 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-int ColumnAverage(int [,] arr)
+string ColumnAverage(int[,] arr)
 {
-    int sum = 0;
+    double sum = 0;
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
 
-    for (int i = 0; i < row; i++)
+    for (int j = 0; j < column; j++)
     {
-        for (int j = 0; j < column; j++)
-        {   
-            sum = sum + arr[i, j];
-            j++;
-            Console.WriteLine();
+        for (int i = 0; i < row; i++)
+        {
+            while (i < row)
+            {
+                sum = sum + arr[i, j];
+                i++;
+            }
+            Console.Write($"Average: {(sum / row)}, ");
         }
-        //неверно для данной задачи
     }
-    return (sum/column);
+    return $"{arr}";
 }
 
 Console.Write("Enter the number of rows: ");
