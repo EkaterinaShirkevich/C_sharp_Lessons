@@ -36,25 +36,19 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-string ColumnAverage(int[,] arr)
+void ColumnAverage(int[,] arr)
 {
-    double sum = 0;
+    double sum;
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
 
-    for (int j = 0; j < column; j++)
+    for (int i = 0; i < column; i++)
     {
-        for (int i = 0; i < row; i++)
-        {
-            while (i < row)
-            {
-                sum = sum + arr[i, j];
-                i++;
-            }
-            Console.Write($"Average: {(sum / row)}, ");
-        }
+        sum = 0;
+        for (int j = 0; j < row; j++)
+            sum = sum + arr[j, i];
+        Console.Write($"Average: {Math.Round(sum / row, 2)}, ");
     }
-    return $"{arr}";
 }
 
 Console.Write("Enter the number of rows: ");
@@ -65,4 +59,4 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = MassNums(row, column, 1, 11);
 Print(arr_1);
 
-Console.WriteLine(ColumnAverage(arr_1));
+ColumnAverage(arr_1);
