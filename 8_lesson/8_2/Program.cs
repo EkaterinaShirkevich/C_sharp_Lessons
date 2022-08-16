@@ -1,5 +1,6 @@
-﻿// 1. Задайте двумерный массив. Напишите программу,
-//    которая поменяет местами первую и последнюю строку массива.
+﻿// 2. Задайте двумерный массив. Напишите программу,
+//    которая заменяет строки на столбцы. В случае, если это невозможно,
+//    программа должна вывести сообщение для пользователя.
 
 void Print(int[,] arr)
 {
@@ -31,22 +32,21 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-int[,] ReverseFirstEndRow(int[,] arr)
+string ChangeRowWithColumn(int [,]arr)
 {
-    int vrem = 0;
-    for (int j = 0; j < arr.GetLength(1); j++)
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+
+    if(row != column)
+    return $"Impossible";
+
+    for (int i = 0; i < row; i++)
     {
-        vrem = arr[0, j]; //переливание - через временную переменную
-        arr[0, j] = arr[arr.GetLength(0) - 1, j];
-        arr[arr.GetLength(0) - 1, j] = vrem;
+        for (int j = 0; j < i; j++)
+        (arr[i,j], arr[j,i]) =(arr[j,i], arr[i,j]);
     }
-    Console.WriteLine();
-    return arr;
+    return $"Correct";
 }
-//либо способ кортежа:
-//(arr[0,1], arr[row-1,i])=(arr[row-1,i], arr[0,i])
-
-
 
 Console.Write("Enter the number of rows: ");
 int row = int.Parse(Console.ReadLine());
@@ -56,5 +56,5 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = MassNums(row, column, 1, 11);
 Print(arr_1);
 
-ReverseFirstEndRow(arr_1);
+Console.WriteLine(ChangeRowWithColumn(arr_1));
 Print(arr_1);
