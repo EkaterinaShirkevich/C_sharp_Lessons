@@ -10,6 +10,9 @@ void IntersectionPoint(double b1, double k1, double b2, double k2)
     Console.WriteLine($"{x},{y}");
 }
 IntersectionPoint(2,5,4,9);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7_Lesson
 
 
